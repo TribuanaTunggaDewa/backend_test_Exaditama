@@ -48,9 +48,8 @@ https://backendtestexaditama.herokuapp.com/football/recordgame
 }
 ```
 ### Description :
-```
-will add the club to the club list if it was not previously in the club list, and will update the data if the club is already in the list
-```
+#### will add the club to the club list if it was not previously in the club list, and will update the data if the club is already in the list
+
 
 ## 2. example request :
 ```
@@ -204,6 +203,5 @@ https://backendtestexaditama.herokuapp.com/football/rank
 ``` 
 
 ### Description :
-```
-show club list with query string and standing
-```
+#### show club list with query string and standing
+
