@@ -2,7 +2,7 @@
 
 ## 1. example request :
 ```
-http://localhost:8000/football/recordgame
+https://backendtestexaditama.herokuapp.com/football/recordgame
 ```
 ### example body :
 ```
@@ -52,7 +52,7 @@ will add the club to the club list if it was not previously in the club list, an
 
 ## 2. example request :
 ```
-http://localhost:8000/football/leaguestanding
+https://backendtestexaditama.herokuapp.com/football/leaguestanding
 ```
 
 ### example success response :
@@ -63,153 +63,138 @@ http://localhost:8000/football/leaguestanding
     "status": "success",
     "message": [
         {
-            "createdAt": "2020-04-16T19:45:02+07:00",
-            "updatedAt": "2020-04-17T00:53:26+07:00",
+            "createdAt": "2020-04-16T20:38:56+00:00",
+            "updatedAt": "2020-04-16T20:40:12+00:00",
+            "clubname": "Man City",
+            "points": 4,
+            "win": 1,
+            "lose": 0,
+            "draw": 1,
+            "match": 2
+        },
+        {
+            "createdAt": "2020-04-16T20:39:33+00:00",
+            "updatedAt": "2020-04-16T20:39:33+00:00",
+            "clubname": "Brimingham",
+            "points": 3,
+            "win": 1,
+            "lose": 0,
+            "draw": 0,
+            "match": 1
+        },
+        {
+            "createdAt": "2020-04-16T20:38:56+00:00",
+            "updatedAt": "2020-04-16T20:40:12+00:00",
             "clubname": "Man Utd",
-            "points": 6,
-            "win": 2,
-            "lose": 0,
-            "draw": 1
-        },
-        {
-            "createdAt": "2020-04-17T00:53:08+07:00",
-            "updatedAt": "2020-04-17T00:53:10+07:00",
-            "clubname": "5",
-            "points": 0,
+            "points": 1,
             "win": 0,
-            "lose": 0,
-            "draw": 1
+            "lose": 1,
+            "draw": 1,
+            "match": 2
         },
         {
-            "createdAt": "2020-04-16T19:45:02+07:00",
-            "updatedAt": "2020-04-17T00:53:26+07:00",
-            "clubname": "Chelsea",
-            "points": 0,
-            "win": 0,
-            "lose": 2,
-            "draw": 1
-        },
-        {
-            "createdAt": "2020-04-17T01:20:31+07:00",
-            "updatedAt": "2020-04-17T01:20:31+07:00",
+            "createdAt": "2020-04-16T20:39:33+00:00",
+            "updatedAt": "2020-04-16T20:39:33+00:00",
             "clubname": "Tottenham",
             "points": 0,
             "win": 0,
-            "lose": 0,
-            "draw": 1
-        },
-        {
-            "createdAt": "2020-04-17T01:20:31+07:00",
-            "updatedAt": "2020-04-17T01:20:31+07:00",
-            "clubname": "Man City",
-            "points": 0,
-            "win": 0,
-            "lose": 0,
-            "draw": 1
+            "lose": 1,
+            "draw": 0,
+            "match": 1
         }
     ]
 }
-}
 ```
-### Description :
+## 3 example with query string request :
 ```
-show club list
+https://backendtestexaditama.herokuapp.com/football/rank?clubname=Man 
 ```
-
-## 3. example request : 
-```
-http://localhost:8000/football/rank?clubname=Man 
-```
-
-### example response : 
+### example with query string response :
 ```
 {
     "code": 200,
     "status": "success",
     "message": [
         {
-            "createdAt": "2020-04-16T19:45:02+07:00",
-            "updatedAt": "2020-04-17T00:53:26+07:00",
-            "clubname": "Man Utd",
-            "points": 6,
-            "win": 2,
+            "createdAt": "2020-04-16T20:38:56+00:00",
+            "updatedAt": "2020-04-16T20:40:12+00:00",
+            "clubname": "Man City",
+            "points": 4,
+            "win": 1,
             "lose": 0,
             "draw": 1,
+            "match": 2,
             "standing": 1
         },
         {
-            "createdAt": "2020-04-17T01:20:31+07:00",
-            "updatedAt": "2020-04-17T01:20:31+07:00",
-            "clubname": "Man City",
-            "points": 0,
+            "createdAt": "2020-04-16T20:38:56+00:00",
+            "updatedAt": "2020-04-16T20:40:12+00:00",
+            "clubname": "Man Utd",
+            "points": 1,
             "win": 0,
-            "lose": 0,
+            "lose": 1,
             "draw": 1,
-            "standing": 5
+            "match": 2,
+            "standing": 3
         }
     ]
 }
 ```
 ### example without query string request :
 ```
-http://localhost:8000/football/rank
+https://backendtestexaditama.herokuapp.com/football/rank
 ```
 
 ### example without query string response :
 ```
 {
+   {
     "code": 200,
     "status": "success",
     "message": [
         {
-            "createdAt": "2020-04-16T19:45:02+07:00",
-            "updatedAt": "2020-04-17T00:53:26+07:00",
-            "clubname": "Man Utd",
-            "points": 6,
-            "win": 2,
+            "createdAt": "2020-04-16T20:38:56+00:00",
+            "updatedAt": "2020-04-16T20:40:12+00:00",
+            "clubname": "Man City",
+            "points": 4,
+            "win": 1,
             "lose": 0,
             "draw": 1,
+            "match": 2,
             "standing": 1
         },
         {
-            "createdAt": "2020-04-17T00:53:08+07:00",
-            "updatedAt": "2020-04-17T00:53:10+07:00",
-            "clubname": "5",
-            "points": 0,
-            "win": 0,
+            "createdAt": "2020-04-16T20:39:33+00:00",
+            "updatedAt": "2020-04-16T20:39:33+00:00",
+            "clubname": "Brimingham",
+            "points": 3,
+            "win": 1,
             "lose": 0,
-            "draw": 1,
+            "draw": 0,
+            "match": 1,
             "standing": 2
         },
         {
-            "createdAt": "2020-04-16T19:45:02+07:00",
-            "updatedAt": "2020-04-17T00:53:26+07:00",
-            "clubname": "Chelsea",
-            "points": 0,
+            "createdAt": "2020-04-16T20:38:56+00:00",
+            "updatedAt": "2020-04-16T20:40:12+00:00",
+            "clubname": "Man Utd",
+            "points": 1,
             "win": 0,
-            "lose": 2,
+            "lose": 1,
             "draw": 1,
+            "match": 2,
             "standing": 3
         },
         {
-            "createdAt": "2020-04-17T01:20:31+07:00",
-            "updatedAt": "2020-04-17T01:20:31+07:00",
+            "createdAt": "2020-04-16T20:39:33+00:00",
+            "updatedAt": "2020-04-16T20:39:33+00:00",
             "clubname": "Tottenham",
             "points": 0,
             "win": 0,
-            "lose": 0,
-            "draw": 1,
+            "lose": 1,
+            "draw": 0,
+            "match": 1,
             "standing": 4
-        },
-        {
-            "createdAt": "2020-04-17T01:20:31+07:00",
-            "updatedAt": "2020-04-17T01:20:31+07:00",
-            "clubname": "Man City",
-            "points": 0,
-            "win": 0,
-            "lose": 0,
-            "draw": 1,
-            "standing": 5
         }
     ]
 }
