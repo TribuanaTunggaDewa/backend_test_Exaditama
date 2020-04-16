@@ -118,10 +118,44 @@ show club list
 
 ## 3. example request : 
 ```
-http://localhost:8000/football/rank
+http://localhost:8000/football/rank?clubname=Man 
 ```
 
 ### example response : 
+```
+{
+    "code": 200,
+    "status": "success",
+    "message": [
+        {
+            "createdAt": "2020-04-16T19:45:02+07:00",
+            "updatedAt": "2020-04-17T00:53:26+07:00",
+            "clubname": "Man Utd",
+            "points": 6,
+            "win": 2,
+            "lose": 0,
+            "draw": 1,
+            "standing": 1
+        },
+        {
+            "createdAt": "2020-04-17T01:20:31+07:00",
+            "updatedAt": "2020-04-17T01:20:31+07:00",
+            "clubname": "Man City",
+            "points": 0,
+            "win": 0,
+            "lose": 0,
+            "draw": 1,
+            "standing": 5
+        }
+    ]
+}
+```
+### example without query string request :
+```
+http://localhost:8000/football/rank
+```
+
+### example without query string response :
 ```
 {
     "code": 200,
@@ -179,38 +213,5 @@ http://localhost:8000/football/rank
         }
     ]
 }
-```
-### example query string request :
-```
-http://localhost:8000/football/rank?clubname=Man 
-```
 
-### example query string response :
-```
-{
-    "code": 200,
-    "status": "success",
-    "message": [
-        {
-            "createdAt": "2020-04-16T19:45:02+07:00",
-            "updatedAt": "2020-04-17T00:53:26+07:00",
-            "clubname": "Man Utd",
-            "points": 6,
-            "win": 2,
-            "lose": 0,
-            "draw": 1,
-            "standing": 1
-        },
-        {
-            "createdAt": "2020-04-17T01:20:31+07:00",
-            "updatedAt": "2020-04-17T01:20:31+07:00",
-            "clubname": "Man City",
-            "points": 0,
-            "win": 0,
-            "lose": 0,
-            "draw": 1,
-            "standing": 5
-        }
-    ]
-}
 ``` 
