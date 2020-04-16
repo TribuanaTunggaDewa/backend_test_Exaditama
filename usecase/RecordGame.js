@@ -34,12 +34,17 @@ exports.recordGame = async (req, res) => {
         response.success.message = await  Promise.all(match.map(async item => {
                                         findClub = await league.show(item.club)
                                         if(findClub){
+                                            findClub = findClub.toJSON()
                                             item.point = findClub.points + item.point
                                             item.win = findClub.win + item.win
+                                            item.draw = findClub.draw + item.draw
                                             item.lose = findClub.lose + item.lose
+                                            item.match = findClub.match + 1
                                             record = await league.update(item)
+                                            item = record
                                         }else{
                                             record = await league.store(item)
+                                            item = record
                                         }
                                         return item
                                     }))

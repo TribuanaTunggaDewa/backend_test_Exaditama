@@ -10,10 +10,10 @@ exports.Point = (home, away) => {
         home.draw = 0
         away.draw = 0
     }else if(home.score == away.score){
-        home.point = 0
+        home.point = 1
         home.win = 0
         home.lose = 0
-        away.point = 0
+        away.point = 1
         away.win = 0
         away.lose = 0
         home.draw = 1

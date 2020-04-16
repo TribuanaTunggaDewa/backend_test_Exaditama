@@ -34,6 +34,7 @@ exports.store = (data, t) => {
         win: data.win,
         lose: data.lose,
         draw: data.draw,
+        match: 1,
         createdAt: moment().format(),
         updatedAt: moment().format()
     },{
@@ -51,7 +52,9 @@ exports.update = (data) => {
         points: data.point,
         win: data.win,
         lose: data.lose,
-        draw: data.draw
+        draw: data.draw,
+        match: data.match,
+        updatedAt: moment().format()
     },{
         where : {
             clubname : data.club

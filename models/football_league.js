@@ -9,6 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     win: DataTypes.INTEGER,
     lose: DataTypes.INTEGER,
     draw: DataTypes.INTEGER,
+    match: DataTypes.INTEGER,
     createdAt:  {
       type : DataTypes.DATE,
       get(){
