@@ -4,7 +4,6 @@ const response = require('../helper/Response')
 
 exports.recordGame = async (req, res) => {
 
-   
     Object.keys(req.body).map((key, index) => {
         if(typeof req.body[key] != "string"){
             response.failed.message = 'every property in body must string !'
@@ -53,4 +52,5 @@ exports.recordGame = async (req, res) => {
         res.status(response.failed.code).json(response.failed)
 
     }
+    
 }
