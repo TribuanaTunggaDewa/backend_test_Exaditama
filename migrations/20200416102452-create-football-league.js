@@ -8,10 +8,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      name: {
+      clubname: {
         type: Sequelize.STRING
       },
-      point: {
+      points: {
         type: Sequelize.INTEGER
       },
       win: {
