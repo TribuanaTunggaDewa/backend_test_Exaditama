@@ -7,9 +7,13 @@ exports.recordGame = async (req, res) => {
     Object.keys(req.body).map((key, index) => {
         if(typeof req.body[key] != "string"){
             response.failed.message = 'every property in body must string !'
-            return res.status(response.failed.code).json(response.failed)
+            return req.body = null
         }
     })
+
+    if(req.body == null){
+        return res.status(response.failed.code).json(response.failed)
+    }
     
     score = req.body.score.split(" ")
     score = score.filter((element) => {
