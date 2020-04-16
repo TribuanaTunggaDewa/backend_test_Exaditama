@@ -8,18 +8,18 @@
     "operatorsAliases": false
   },
   "test": {
-    "username": "dxyxqgftddyize",
-    "password": "777a7dd5d218b19432a7fed7c09422d65b01f6c50eb6aa032119e839d58c61d8",
-    "database": "dd16fdi6ljefjg",
-    "host": "ec2-54-152-175-141.compute-1.amazonaws.com",
+    "username": "xaorxockkktuum",
+    "password": "e82f57f83523a1f1c7098830d1aee92f5af8edce578f3938781b3b5e02ddd603",
+    "database": "d4405g7019ep5u",
+    "host": "ec2-54-157-78-113.compute-1.amazonaws.com",
     "dialect": "postgres",
     "operatorsAliases": false
   },
   "production": {
-    "username": "dxyxqgftddyize",
-    "password": "777a7dd5d218b19432a7fed7c09422d65b01f6c50eb6aa032119e839d58c61d8",
-    "database": "dd16fdi6ljefjg",
-    "host": "ec2-54-152-175-141.compute-1.amazonaws.com",
+    "username": "xaorxockkktuum",
+    "password": "e82f57f83523a1f1c7098830d1aee92f5af8edce578f3938781b3b5e02ddd603",
+    "database": "d4405g7019ep5u",
+    "host": "ec2-54-157-78-113.compute-1.amazonaws.com",
     "dialect": "postgres",
     "operatorsAliases": false
   }
