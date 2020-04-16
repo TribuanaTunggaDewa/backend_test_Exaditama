@@ -1,5 +1,4 @@
 const football_league = require('../models').football_league
-const {Sequelize} = require('../models/index')
 
 exports.show = (name) => {
     return football_league.findOne({
@@ -15,7 +14,9 @@ exports.show = (name) => {
 
 exports.index = () => {
     return football_league.findAll({
-            attributes : ['clubname','points'],
+            attributes :{
+                exclude : ['id']
+            },
             order : [['points','DESC']]
         }).then(result => {
                return result
