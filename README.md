@@ -215,3 +215,8 @@ http://localhost:8000/football/rank
 }
 
 ``` 
+
+### Description :
+```
+show club list with query string and standing
+```
