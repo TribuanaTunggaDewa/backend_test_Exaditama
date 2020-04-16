@@ -1,5 +1,7 @@
 # backend_test_Exaditama
 
+## The endpoint below has been hosted on Heroku, so you can try it
+
 ## 1. example request :
 ```
 https://backendtestexaditama.herokuapp.com/football/recordgame
