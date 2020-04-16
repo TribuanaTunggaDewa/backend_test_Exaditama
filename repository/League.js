@@ -1,4 +1,5 @@
 const football_league = require('../models').football_league
+const moment = require('moment')
 
 exports.show = (name) => {
     return football_league.findOne({
@@ -32,7 +33,9 @@ exports.store = (data, t) => {
         points: data.point,
         win: data.win,
         lose: data.lose,
-        draw: data.draw
+        draw: data.draw,
+        createdAt: moment().format(),
+        updatedAt: moment().format()
     },{
         transaction: t
     }).then(() => {
