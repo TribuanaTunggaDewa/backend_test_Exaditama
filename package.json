@@ -5,7 +5,8 @@
   "main": "App.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild" : "npm install --production"
+    "heroku-postbuild" : "npm install --production",
+    "start": "node App.js"
   },
   "engines":{
     "node":"12.16.1",
