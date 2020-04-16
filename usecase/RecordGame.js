@@ -4,14 +4,18 @@ const response = require('../helper/Response')
 
 exports.recordGame = async (req, res) => {
 
-    Object.keys(req.body).map((key, index) => {
-        if(typeof req.body[key] != "string"){
-            response.failed.message = 'every property in body must string !'
-            return req.body = null
-        }
+  check= await  Promise.all(Object.keys(req.body).map((key, index) => {
+                    if(typeof req.body[key] != "string"){
+                        response.failed.message = 'every property in body must string !'
+                        return false
+                    }
+                }))
+    
+    check = check.filter(element => {
+        return element == false
     })
 
-    if(req.body == null){
+    if(check.length != 0){
         return res.status(response.failed.code).json(response.failed)
     }
     

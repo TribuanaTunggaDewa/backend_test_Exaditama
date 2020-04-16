@@ -16,4 +16,4 @@ app.group('/football', (routes)=> {
     routes.get('/rank', league.rankDetail)
 }) 
 
-app.listen(process.env.PORT || 5000, () => console.log(`listening on port : ${process.env.APP_PORT}`))
+app.listen(8000, () => console.log(`listening on port : ${process.env.APP_PORT}`))
